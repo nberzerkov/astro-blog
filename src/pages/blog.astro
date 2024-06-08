@@ -1,21 +1,26 @@
 ---
-
+const blogTitle = "my blog";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-	  <a href="/">home</a>
-    <a href="/about/">about</a>
-    <a href="/blog/">blog</a>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{blogTitle}</title>
+    </head>
+    <body>
+        <a href="/">home</a>
+        <a href="/about/">about</a>
+        <a href="/blog/">{blogTitle}</a>
 
-	  <h1>Content</h1>
-    <p>This is where i will post about my ideas and life</p>
-	</body
+        <h1>Content</h1>
+        <p>This is where i will post about my ideas and life</p>
+        <ul>
+            <li><a href="/posts/post-1/">Post 1</a></li>
+            <li><a href="/posts/post-2/">Post 2</a></li>
+            <li><a href="/posts/post-3/">Post 3</a></li>
+        </ul>
+    </body>
 </html>
