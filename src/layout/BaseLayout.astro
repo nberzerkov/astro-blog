@@ -1,7 +1,7 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import BaseLayout from "../layout/BaseLayout.astro";
-
 const { pageTitle } = Astro.props;
 ---
 
@@ -14,15 +14,10 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <BaseLayout>
-      <h1>{pageTitle}</h1>
-      <p>This is where i will post about my ideas and life</p>
-      <ul>
-        <li><a href="/posts/post-1/">Post 1</a></li>
-        <li><a href="/posts/post-2/">Post 2</a></li>
-        <li><a href="/posts/post-3/">Post 3</a></li>
-      </ul>
-    </BaseLayout>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <slot />
+    <Footer />
 
     <script>
       import "../scripts/menu.js";

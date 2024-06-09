@@ -11,5 +11,10 @@
   },
   "dependencies": {
     "astro": "^4.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.4.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "prettier-plugin-astro": "^0.14.0"
   }
 }
