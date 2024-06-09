@@ -1,8 +1,6 @@
 ---
-import "../styles/global.css";
 import BaseLayout from "../layout/BaseLayout.astro";
-
-const { pageTitle } = Astro.props;
+const aboutTitle = "about";
 
 const identity = {
   myName: "Enduraev",
@@ -38,7 +36,7 @@ const styles = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{aboutTitle}</title>
 
     <style define:vars={styles}>
       h1 {
@@ -53,8 +51,7 @@ const styles = {
     </style>
   </head>
   <body>
-    <BaseLayout>
-      <h1>{pageTitle}</h1>
+    <BaseLayout pageTitle={aboutTitle}>
       <h3>Интересуюсь всем и делюсь этим с миром</h3>
       <p>Here are a few facts about me:</p>
       <ul>
@@ -88,9 +85,5 @@ const styles = {
         )
       }
     </BaseLayout>
-
-    <script>
-      import "../scripts/menu.js";
-    </script>
   </body>
 </html>
